@@ -17,7 +17,7 @@ const Main = () => {
       <div id="container">{
       <table>
       <tbody>
-        <tr>
+        <tr key={contacts.id}>
           <th>Name</th>
           <th>Phone</th>
           <th>Email</th>
@@ -25,7 +25,7 @@ const Main = () => {
     
         {contacts.map(contacts => {
          
-         return <tr>
+         return <tr key={contacts.info}>
           <td>{contacts.name}</td>
           <td>{contacts.phone}</td> 
           <td>{contacts.email}</td>
