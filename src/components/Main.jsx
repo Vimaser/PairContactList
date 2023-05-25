@@ -4,8 +4,8 @@ const Main = () => {
   const [contacts, setContacts] = useState(dummyContacts);
  
   {
-    contacts.map(contact => {
-      return contact.name;
+    contacts.map(contacts => {
+      return contacts.name;
     })
   }
 
@@ -15,11 +15,31 @@ const Main = () => {
         <div>Contact List</div>
       </div>
       <div id="container">{
-      
+      <table>
+      <tbody>
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Email</th>
+        </tr>
+    
+        {contacts.map(contacts => {
+         
+         return <tr>
+          <td>{contacts.name}</td>
+          <td>{contacts.phone}</td> 
+          <td>{contacts.email}</td>
+          </tr>;
+        })
+  }
+    
+      </tbody>
+    </table>
       }</div>
     </div>
   );
-};
+    }
+    
 
 export default Main;
 import dummyContacts from '../dummyData'
